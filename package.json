@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-three/drei": "^10.0.5",
     "@react-three/fiber": "^9.1.0",
+    "@react-three/postprocessing": "^3.0.4",
     "aos": "^2.3.4",
     "framer-motion": "^12.6.2",
     "react": "^19.0.0",

@@ -4,6 +4,9 @@ import Hook from './Hook'
 // import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { EffectComposer, Bloom } from '@react-three/postprocessing';
+
+
 
 function App() {
 
@@ -20,8 +23,10 @@ function App() {
   return (
    <>
 
-    <div className="h-screen w-full bg-[url('https://t4.ftcdn.net/jpg/01/67/23/55/360_F_167235520_AFrB955JhCwhkpz1ev2L7X9SBcpVgAyg.jpg')] bg-cover bg-center">
-      <Canvas>
+    {/* <div className="h-screen w-full bg-[url('https://t4.ftcdn.net/jpg/01/67/23/55/360_F_167235520_AFrB955JhCwhkpz1ev2L7X9SBcpVgAyg.jpg')] bg-cover bg-center"> */}
+    <div className="h-screen w-full bg-black">
+
+      <Canvas shadows>
   <Hook/>
       </Canvas>
 
@@ -44,22 +49,32 @@ function App() {
       </h1>
   
     </motion.div> */}
-         <h1 
-             data-aos="fade-down" 
-             data-aos-duration="2000" // Optional: set duration for animation
-         className="text-6xl font-extrabold uppercase text-white whitespace-nowrap">
-          I am Jaydip,
-        </h1>
+     <h1 
+  data-aos="fade-down" 
+  data-aos-duration="2000"
+  className="text-6xl font-extrabold uppercase text-white whitespace-nowrap 
+             animate-pulse bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text drop-shadow-2xl"
+>
+  I am Jaydip,
+</h1>
+
 
         <h1 
-             data-aos="fade-up" 
-             data-aos-duration="5000" // Optional: set duration for animation
-             data-aos-delay="1000" 
-         className="text-6xl font-extrabold uppercase text-white whitespace-nowrap">
-          a passionate Full Stack Developer specializing in MERN
-        </h1>
+  data-aos="fade-up" 
+  data-aos-duration="5000"
+  data-aos-delay="1000"
+  className="text-6xl font-extrabold uppercase text-white whitespace-nowrap"
+>
+  A passionate <span className="text-yellow-400 drop-shadow-lg">Full Stack Developer</span> specializing in  
+  <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"> MERN</span>
+</h1>
+
+
+
+     
 
     </div>
+
       
     </div>
 
