@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@react-three/fiber": "^9.1.0",
+    "aos": "^2.3.4",
+    "framer-motion": "^12.6.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "three": "^0.175.0"
