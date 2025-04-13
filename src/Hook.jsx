@@ -30,7 +30,9 @@ export default function Hook() {
       });
       
 
-      const colorMap = useLoader(TextureLoader, './me.png')
+      const colorMap = useLoader(TextureLoader, './canvas.png')
+      // const colorMap = useLoader(TextureLoader, './me.png')
+      // const colorMap = useLoader(TextureLoader, './jaydip.png')
       console.log(colorMap)
 
   return (
@@ -52,12 +54,20 @@ export default function Hook() {
     receiveShadow >
     
         {/* Higher Segments for Smoothness */}
-        <cylinderGeometry args={[2, 2, 4, 64, 60, true]} />
+        {/* <cylinderGeometry args={[2, 2, 4, 64, 60, true]} /> */}
 
-    <meshStandardMaterial map={colorMap} transparent side={THREE.DoubleSide} 
+        {/* <sphereGeometry args={[2, 64, 64]} /> */}
+
+        <boxGeometry args={[3, 3, 3]} /> 
+        {/* Box geometry for the top part */}
+
+    <meshStandardMaterial  map={colorMap}   transparent side={THREE.DoubleSide} 
           roughness={0.5} /* Reduces roughness for smooth surface */
           metalness={0.1} /* Adds a glossy effect */
+          //wireframe={true} /* Adds a wireframe effect */
+          
     />
+
   </mesh>
 
   {/* Bloom Effect for Glow */}
